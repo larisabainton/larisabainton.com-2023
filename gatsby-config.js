@@ -20,5 +20,22 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
+    {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+        web: [
+          {
+            name: 'Dawning of a New Day',
+            file: 'https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&display=swap',
+          },
+          {
+            name: 'Work Sans',
+            file: 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap',
+          }
+        ],
+      },
+    },
   ]
 };

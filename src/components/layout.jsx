@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 const header = (
     <header>
-        <div className="header_logo"></div>
+        <div className="header_title">Larisa Bainton</div>
         <div className="header_links">
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
