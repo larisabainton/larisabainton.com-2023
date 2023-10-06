@@ -4,7 +4,21 @@
 module.exports = {
   siteMetadata: {
     title: `Larisa Bainton`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.larisabainton.com`
   },
-  plugins: ["gatsby-plugin-sass"]
+  plugins: [
+    "gatsby-plugin-sass",
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        // The unique name for each instance
+        name: `images`,
+        // Path to the directory
+        path: `${__dirname}/src/images/`,
+      },
+    },
+  ]
 };
