@@ -1,0 +1,30 @@
+.index_about {
+    display: flex;
+    width: 100%;
+    padding-top: 10vh;
+}
+
+.index_about_image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .gatsby-image-wrapper {
+        border-radius: 50%;
+        max-width: 35vw;
+    }
+}
+
+.index_about_text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.index_about_title {
+    font-family: $title-font-family;
+    font-size: $title-font-size;
+}

@@ -1,8 +1,17 @@
 @import 'constants';
 
-@import 'index';
+@import 'index/about';
+@import 'index/calendar';
+@import 'index/contact';
+@import 'index/cover';
+@import 'index/projects';
 @import 'layout';
 
 body {
     font-family: $text-font-family;
+    font-size: $text-font-size;
+}
+
+footer {
+    text-align: center;
 }

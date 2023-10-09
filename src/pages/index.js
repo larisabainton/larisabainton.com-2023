@@ -15,8 +15,13 @@ const coverSection = (
 
 const aboutSection = (
     <div className="index_about">
-        <div className="index_about_title">About</div>
-        <div className="index_about_text">Lorem Ipsum</div>
+        <div className="index_about_image">
+            <StaticImage src="../images/about.png" alt="Larisa standing in front of a tree"/>
+        </div>
+        <div className="index_about_text">
+            <div className="index_about_title">About</div>
+            <div className="index_about_blurb">Lorem Ipsum</div>
+        </div>
     </div>
 );
 
@@ -28,11 +33,14 @@ const calendarSection = (
 );
 
 const projectsSection = (
-    <div className="index_projects"></div>
+    <div className="index_projects">
+        <div className="index_projects_title">Projects</div>
+    </div>
 );
 
 const contactSection = (
     <div className="index_contact">
+        <div className="index_contact_title">Contact</div>
         <ContactForm />
     </div>
 );
