@@ -50,6 +50,19 @@ const eventsList = [
     }
 ]
 
+const formatDate = (date) => {
+    const options = {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        weekday: 'short',
+        hour12: true,
+        hour: 'numeric',
+        minute: 'numeric',
+    }
+    return date.toLocaleDateString("en-US", options);
+}
+
 const getDetailsListItems = (details) => {
     return details.map(({ location, locationLink, date}, i) => {
         return (
@@ -57,7 +70,7 @@ const getDetailsListItems = (details) => {
                 <div className="calendar_list-item_details_location">
                     <a href={locationLink}>{location}</a>
                 </div>
-                <div className="calendar_list-item_details_date">{date.toString()}</div>
+                <div className="calendar_list-item_details_date">{formatDate(date)}</div>
             </li>
         )
     })
@@ -84,7 +97,7 @@ const getEventListItems = (sourcePage) => {
 
 const Calendar = ({ sourcePage }) => {
     return (
-        <ul className={sourcePage + "_calendar calendar"}>
+        <ul className={sourcePage + "_events_calendar events_calendar"}>
             {getEventListItems(sourcePage)}
         </ul>
     )

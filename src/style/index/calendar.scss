@@ -1,4 +1,48 @@
+.index_calendar {
+    padding-left: $section-padding-left;
+    padding-top: $section-padding-vertical;
+    padding-bottom: $section-padding-vertical;
+    border-top: 2px solid darkgreen;
+}
+
 .index_calendar_title {
     font-family: $title-font-family;
     font-size: $title-font-size;
+}
+
+.index_calendar_list-item {
+    background-color: rgba(255,236,242, .5);
+    margin-right: 15%;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+// General Calendar
+
+ul {
+    list-style-type: none;
+}
+
+.events_calendar {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+
+    a {
+        text-decoration:none;
+        color: black;
+    }
+}
+
+.calendar_list-item {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.calendar_list-item_name {
+    font-size: 3vh;
+}
+
+.calendar_list-item_role {
+    font-weight: bolder;
 }

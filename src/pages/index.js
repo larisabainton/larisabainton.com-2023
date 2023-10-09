@@ -35,6 +35,7 @@ const calendarSection = (
 const projectsSection = (
     <div className="index_projects">
         <div className="index_projects_title">Projects</div>
+        <div className="index_projects_text">Click <a href='/projects'>here</a> for a full list of Larisa's creative projects.</div>
     </div>
 );
 
