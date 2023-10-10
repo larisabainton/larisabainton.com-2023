@@ -63,35 +63,25 @@ const formatDate = (date) => {
     return date.toLocaleDateString("en-US", options);
 }
 
-const getDetailsListItems = (details) => {
-    return details.map(({ location, locationLink, date}, i) => {
-        return (
-            <li className="calendar_list-item_details" key={i}>
-                <div className="calendar_list-item_details_location">
-                    <a href={locationLink}>{location}</a>
-                </div>
-                <div className="calendar_list-item_details_date">{formatDate(date)}</div>
-            </li>
-        )
-    })
-}
-
 const getEventListItems = (sourcePage) => {
-    return eventsList.map((eventData, i) => {
+    return eventsList.map((eventData) => {
         const { name, role, company, companyLink, details } = eventData;
-        
-        return (
-            <li className={sourcePage + "_calendar_list-item calendar_list-item"} key={i}>
-                <div className="calendar_list-item_name">{name}</div>
-                <div className="calendar_list-item_role">{role}</div>
-                <div className="calendar_list-item_company">
-                    <a href={companyLink}>{company}</a>
-                </div>
-                <ul>
-                    {getDetailsListItems(details)}
-                </ul>
-            </li>
-        )
+
+        return details.map(({ location, locationLink, date}, i) => {
+            return (
+                <li className={sourcePage + "_calendar_list-item calendar_list-item"} key={i}>
+                    <div className="calendar_list-item_name">{name}</div>
+                    <div className="calendar_list-item_role">{role}</div>
+                    <div className="calendar_list-item_company">
+                        <a href={companyLink}>{company}</a>
+                    </div>
+                    <div className="calendar_list-item_details_location">
+                        <a href={locationLink}>{location}</a>
+                    </div>
+                    <div className="calendar_list-item_details_date">{formatDate(date)}</div>
+                </li>
+            )
+        }) 
     }
 )}
 
