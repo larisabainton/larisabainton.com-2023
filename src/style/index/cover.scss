@@ -1,20 +1,53 @@
+$cover-photo-height: 100vh - $header-height;
+
 .index_cover_photo {
-    max-height: 100vh;
+   height: $cover-photo-height;
 }
 
 .index_cover_photo img {
     object-position: 0px -35vh;
 }
 
-@media screen and (max-width:900px) {
+.index_cover_background {
+    position: absolute;
+    height: $cover-photo-height;
+    width: 100%;
+}
+
+.index_cover_foreground {
+    position: relative;
+    height: $cover-photo-height;
+    width: 100%;
+    z-index: 7;
+}
+
+.index_cover_flowers_bottom {
+    position: absolute;
+    bottom: 0vh;
+    left: 0vw;
+    max-width: 45vw;
+    max-height: 45vh;
+    animation-name: slide-up;
+    animation-duration: 1.5s;
+}
+
+@media screen and (max-width:950px) {
     .index_cover_photo img {
         object-position: center;
     }
+}
+
+@media screen and (min-width: 1000px) {
+    // .index_cover_flowers_bottom {
+    //     max-width: 30vw;
+    //     max-height: 30vh;
+    //     bottom: 0px;
+    //     left: 0px;
+    // }
 }
 
 @media screen and (min-width: 1500px) {
     .index_cover_photo img {
         object-position: 0px -50vh;
     }
-
 }

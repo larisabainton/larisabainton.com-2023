@@ -8,8 +8,12 @@ import ContactForm from "../components/contactForm";
 
 const coverSection = (
     <div className="index_cover">
-        <StaticImage className="index_cover_photo" src="../images/cover.jpg" alt="Larisa smiling and sitting on a bench" />
-         <div className="index_cover_text"></div>
+        <div className="index_cover_background">
+            <StaticImage className="index_cover_photo" src="../images/cover.jpg" alt="Larisa smiling and sitting on a bench" />
+        </div>
+        <div className="index_cover_foreground">
+            <StaticImage className="index_cover_flowers_bottom" src="../images/flowers/cover_bottom-left.png" alt="" />
+        </div>
     </div>
 )
 

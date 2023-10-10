@@ -9,3 +9,19 @@ $text-font-size: 2vh;
 // Padding
 $section-padding-vertical: 10vh;
 $section-padding-left: 15%;
+
+// Size
+$header-height: 8.25vh;
+
+// Animation
+
+@keyframes slide-up {
+    0% {
+        bottom: -10000px;
+        left: -10000px;
+    }
+    100% {
+        bottom: 0vh;
+        left: 0vw;
+    }
+}
