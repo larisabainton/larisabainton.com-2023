@@ -11,10 +11,19 @@
     justify-content: center;
     align-items: center;
 
-    .gatsby-image-wrapper {
+    .index_about_image_background {
         border-radius: 50%;
         max-width: 35vw;
+        position: absolute;
+        z-index: 2;
     }
+}
+
+.index_about_image_foreground {
+    position: relative;
+    z-index: 10;
+    animation-name: circle-grow;
+    animation-duration: 1.5s;
 }
 
 .index_about_text {
@@ -28,4 +37,9 @@
 .index_about_title {
     font-family: $title-font-family;
     font-size: $title-font-size;
+}
+
+.index_about_blurb {
+    padding-left: 2vw;
+    padding-right: 2vw;
 }

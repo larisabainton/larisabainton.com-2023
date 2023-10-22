@@ -4,10 +4,6 @@ $cover-photo-height: 100vh - $header-height;
    height: $cover-photo-height;
 }
 
-.index_cover_photo img {
-    object-position: 0px -35vh;
-}
-
 .index_cover_background {
     position: absolute;
     height: $cover-photo-height;
@@ -21,33 +17,27 @@ $cover-photo-height: 100vh - $header-height;
     z-index: 7;
 }
 
+.index_cover_flowers_top {
+    position: absolute;
+    width: 45vw;
+    top: 0vh;
+    right: 0vw;
+    animation-name: slide-down;
+    animation-duration: 2s;
+}
+
 .index_cover_flowers_bottom {
     position: absolute;
     bottom: 0vh;
     left: 0vw;
-    max-width: 45vw;
-    max-height: 45vh;
+    width: 45vw;
     animation-name: slide-up;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
 }
 
-@media screen and (max-width:950px) {
-    .index_cover_photo img {
-        object-position: center;
-    }
-}
-
-@media screen and (min-width: 1000px) {
-    // .index_cover_flowers_bottom {
-    //     max-width: 30vw;
-    //     max-height: 30vh;
-    //     bottom: 0px;
-    //     left: 0px;
-    // }
-}
-
-@media screen and (min-width: 1500px) {
-    .index_cover_photo img {
-        object-position: 0px -50vh;
+@media screen and (min-width: 1300px) {
+    .index_cover_flowers_bottom,
+    .index_cover_flowers_top {
+        width: 30vw;
     }
 }

@@ -1,8 +1,14 @@
-.index_calendar {
+.index_calendar_background {
+    position: absolute;
+    width: 100%;
+}
+
+.index_calendar_foreground {
     padding-left: $section-padding-left;
     padding-top: $section-padding-vertical;
     padding-bottom: $section-padding-vertical;
-    border-top: 2px solid darkgreen;
+    position: relative;
+    z-index: 7;
 }
 
 .index_calendar_title {

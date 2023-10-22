@@ -17,11 +17,52 @@ $header-height: 8.25vh;
 
 @keyframes slide-up {
     0% {
-        bottom: -10000px;
-        left: -10000px;
+        bottom: -10000vh;
+        left: -10000vw;
+        opacity: 0;
+    }
+    75% {
+        opacity: 0
     }
     100% {
         bottom: 0vh;
         left: 0vw;
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        top: -10000vh;
+        right: -10000vw;
+        opacity: 0;
+    }
+    75% { 
+        opacity: 0
+    }
+    100% {
+        top: 0vh;
+        right: 0vw;
+        opacity: 1;
+    }
+}
+
+@keyframes circle-grow {
+    0% {
+        width: 40vw;
+        opacity: 0%;
+        z-index: 1;
+    }
+    50% {
+        opacity: 0;
+        z-index:1;
+    }
+    99% {
+        z-index: 1;
+    }
+    100% {
+        width: 50vw;
+        opacity: 100%;
+        z-index:10
     }
 }
