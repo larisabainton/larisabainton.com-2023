@@ -1,14 +1,9 @@
-.index_calendar_background {
-    position: absolute;
-    width: 100%;
-}
+.index_calendar {
 
-.index_calendar_foreground {
-    padding-left: $section-padding-left;
     padding-top: $section-padding-vertical;
     padding-bottom: $section-padding-vertical;
-    position: relative;
-    z-index: 7;
+    padding-left: $section-padding-horizontal;
+    padding-right: $section-padding-horizontal;
 }
 
 .index_calendar_title {
@@ -17,10 +12,8 @@
 }
 
 .index_calendar_list-item {
-    background-color: rgba(255,236,242, .5);
-    margin-right: 15%;
-    padding-left: 1vw;
-    padding-right: 1vw;
+    border: 1px solid green;
+
 }
 
 // General Calendar
@@ -40,15 +33,48 @@ ul {
     }
 }
 
-.calendar_list-item {
+
+.calendar_list-item_foreground {
+    position: relative;
+    z-index: 7;
     padding-top: 1vh;
     padding-bottom: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.calendar_list-item_name {
+.calendar_list-item_show-info_name {
     font-size: 3vh;
 }
 
-.calendar_list-item_role {
+.calendar_list-item_show-info_role {
     font-weight: bolder;
+    font-family: $title-font-family;
+    font-size: 3vh;
+}
+
+.calendar_list-item_details_date {
+    flex: 1;
+}
+
+.calendar_list-item_details_show-info {
+    flex: 2;
+}
+
+@media screen and (max-width: 800px) {
+    .calendar_list-item_foreground {
+        flex-direction: column;
+    }
+
+    .calendar_list-item_details_show-info {
+        text-align: center;
+    }
+
+    .calendar_list-item_details_date {
+        text-align: center;
+    }
 }
