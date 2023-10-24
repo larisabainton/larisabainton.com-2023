@@ -1,0 +1,16 @@
+.calendar-page {
+    padding-top: $section-padding-vertical;
+    padding-bottom: $section-padding-vertical;
+    padding-left: $section-padding-horizontal;
+    padding-right: $section-padding-horizontal;
+}
+
+.calendar-page_calendar_title {
+    font-family: $title-font-family;
+    font-size: $title-font-size;
+}
+
+.calendar-page_calendar_list-item {
+    border: 1px solid green;
+
+}

@@ -7,6 +7,7 @@ const CalendarPage = () => {
     return (
         <Layout>
             <main className="calendar-page">
+                <div className="calendar-page_calendar_title">Events</div>
                 <Calendar sourcePage="calendar-page"/>
             </main>
         </Layout>
