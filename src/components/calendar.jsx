@@ -51,16 +51,25 @@ const eventsList = [
 ]
 
 const formatDate = (date) => {
-    const options = {
+    const dateOptions = {
         year: 'numeric',
-        month: 'long',
+        month: 'short',
         day: 'numeric',
         weekday: 'short',
+    }
+
+    const timeOptions = {
         hour12: true,
         hour: 'numeric',
         minute: 'numeric',
     }
-    return date.toLocaleDateString("en-US", options);
+
+    return (
+        <div className="calendar_list-item_details_date">
+            <div className="calendar_list-item_details_date_mdy">{date.toLocaleDateString("en-US", dateOptions)}</div>
+            <div className="calendar_list-item_details_date_time">{date.toLocaleTimeString("en-US", timeOptions)}</div>
+        </div>
+    )
 }
 
 const getEventListItems = (sourcePage) => {
@@ -70,15 +79,21 @@ const getEventListItems = (sourcePage) => {
         return details.map(({ location, locationLink, date}, i) => {
             return (
                 <li className={sourcePage + "_calendar_list-item calendar_list-item"} key={i}>
-                    <div className="calendar_list-item_name">{name}</div>
-                    <div className="calendar_list-item_role">{role}</div>
-                    <div className="calendar_list-item_company">
-                        <a href={companyLink}>{company}</a>
+                    <div className="calendar_list-item_background">
                     </div>
-                    <div className="calendar_list-item_details_location">
-                        <a href={locationLink}>{location}</a>
+                    <div className="calendar_list-item_foreground">
+                        {formatDate(date)}
+                        <div className="calendar_list-item_details_show-info">
+                            <div className="calendar_list-item_show-info_name">{name}</div>
+                            <div className="calendar_list-item_show-info_role">{role}</div>
+                            <div className="calendar_list-item_company">
+                                <a href={companyLink}>{company}</a>
+                            </div>
+                        </div>
+                        <div className="calendar_list-item_details_location">
+                            <a href={locationLink}>{location}</a>
+                        </div>
                     </div>
-                    <div className="calendar_list-item_details_date">{formatDate(date)}</div>
                 </li>
             )
         }) 
