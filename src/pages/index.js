@@ -38,21 +38,21 @@ const aboutSection = (
 
 const calendarSection = (
     <div className="index_calendar">
-        <div className="index_calendar_background">
-            <StaticImage src="../images/flowers/events-background.png" className="index_calendar_image"/>
-        </div>
-        <div className="index_calendar_foreground">
-            <div className="index_calendar_title">Events</div>
-            <Calendar sourcePage="index" />
-        </div>
-        
+        <div className="index_calendar_title">Events</div>
+        <Calendar sourcePage="index" />
     </div>
 );
 
 const projectsSection = (
     <div className="index_projects">
-        <div className="index_projects_title">Projects</div>
-        <div className="index_projects_text">Click <a href='/projects'>here</a> for a full list of Larisa's creative projects.</div>
+        <div className="index_projects_background">
+            <StaticImage src="../images/flowers/projects-background.png" className="index_projects_image"/>
+        </div>
+        <div className="index_projects_foreground">
+            <div className="index_projects_title">Projects</div>
+            <div className="index_projects_text">Click <a href='/projects'>here</a> for a full list of Larisa's creative projects.</div>
+        </div>
+        
     </div>
 );
 
