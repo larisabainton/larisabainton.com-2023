@@ -1,0 +1,38 @@
+.contact-page {
+    display: flex;
+    flex: 2;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    form {
+        width: 60vw;
+    }
+}
+
+.contact-page_foreground {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-page_title {
+    font-family: $title-font-family;
+    font-size: $title-font-size;
+    text-align: center;
+}
+
+
+.contact-page_background {
+    position: absolute;
+    bottom: 0px;
+}
+
+.contact-page_foreground {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}

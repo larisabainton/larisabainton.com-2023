@@ -1,15 +1,12 @@
-.calendar-page {
+.projects-page {
     padding-top: $section-padding-vertical;
     padding-bottom: $section-padding-vertical;
     padding-left: $section-padding-horizontal;
     padding-right: $section-padding-horizontal;
+    flex: 2;
 }
 
-.calendar-page_calendar_title {
+.projects-page_title {
     font-family: $title-font-family;
     font-size: $title-font-size;
-}
-
-.calendar-page_calendar_list-item {
-    border: 1px solid green;
 }
