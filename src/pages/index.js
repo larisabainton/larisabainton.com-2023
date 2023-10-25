@@ -58,8 +58,14 @@ const projectsSection = (
 
 const contactSection = (
     <div className="index_contact">
-        <div className="index_contact_title">Contact</div>
-        <ContactForm />
+        <div className="index_contact_background">
+            <StaticImage src="../images/flowers/contact.png" className="index_contact_image"/>
+        </div>
+        <div className="index_contact_foreground">
+            <div className="index_contact_title">Contact</div>
+            <ContactForm />
+        </div>
+        
     </div>
 );
 
