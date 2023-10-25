@@ -11,9 +11,8 @@ const MediaPage = () => {
                     <ul className="media-page_list">
                         <li className="media-page_list-item">
                             <iframe 
-                                width="560" 
-                                height="315" 
                                 src="https://www.youtube.com/embed/oNngx0GyYqE?si=fSK5XifvQUtN60A1" 
+                                className="youtube-video"
                                 title="YouTube video player" 
                                 frameborder="0" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 

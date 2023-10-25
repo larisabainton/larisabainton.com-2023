@@ -41,3 +41,23 @@
     padding-left: 2vw;
     padding-right: 2vw;
 }
+
+@media screen and (max-width: 1000px) {
+    .about-page {
+        flex-direction: column;
+    }
+
+    .about_image {
+        width: 100%;
+    }
+
+    .about_text {
+        width: 90vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .about_image .about_image_background {
+        max-width: 72vw;
+    }
+}

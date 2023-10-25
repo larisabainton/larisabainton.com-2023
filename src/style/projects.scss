@@ -9,6 +9,8 @@
     padding-left: $section-padding-horizontal;
     padding-right: $section-padding-horizontal;
     z-index: 5;
+    display: flex;
+    flex-direction: column;
 }
 
 .projects-page_background { 
@@ -27,8 +29,16 @@
     font-size: $title-font-size;
 }
 
+.projects-page_list {
+    display: flex;
+    flex-direction: column;
+}
+
 .projects-page_list-item {
     padding-top: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .projects-page_list-item:first-child {
@@ -60,4 +70,27 @@
 .website_list-item embed {
     width: 35vw;
     height: 55vh;
+}
+
+@media screen and (max-width: 600px) {
+    .projects-page_foreground {
+        padding-left: 1vw;
+        padding-right: 1vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projects-page_list,
+    .projects-page_list-item,
+    .projects-page_list-item_list {
+        align-items: center;
+    }
+
+    .website-list {
+        gap: 6vh;
+    }
+
+    .website_list-item embed {
+        width: 98vw;
+    }
 }

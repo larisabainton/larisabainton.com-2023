@@ -36,11 +36,11 @@ const webDesignSection =  () => {
             <div className="projects-page_list-item_title website_title">Web Developer & Designer</div>
             <ul className="projects-page_list-item_list website_list">
                 <li className="projects-page_list-item_list-item website_list-item">
-                    <embed src="http://westendlyric.com" width='500px' height= '300px' />
+                    <embed src="http://westendlyric.com" />
                     <div className="projects-page_list-item_list-item_description website_list-item_description">West End Lyric</div>
                 </li>
                 <li className="projects-page_list-item_list-item website_list-item">
-                    <embed src="http://lessonswithlarisa.com" width='500px' height= '300px' />
+                    <embed src="http://lessonswithlarisa.com" />
                     <div className="projects-page_list-item_list-item_description website_list-item_description">Lessons with Larisa</div>
                 </li>
             </ul>
@@ -55,9 +55,8 @@ const digitalMediaSection = () => {
             <ul className="projects-page_list-item_list digital-media_list">
                 <li className="projects-page_list-item_list-item digital-media_list-item">
                     <iframe 
-                        width="560" 
-                        height="315" 
                         src="https://www.youtube.com/embed/tWrpSYMKR0c?si=5F5Q8YUO8EOKbbJk" 
+                        className="youtube-video"
                         title="YouTube video player" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 

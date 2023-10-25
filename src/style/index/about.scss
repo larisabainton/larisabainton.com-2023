@@ -32,6 +32,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 
 .index_about_title {
@@ -39,7 +41,15 @@
     font-size: $title-font-size;
 }
 
-.index_about_blurb {
-    padding-left: 2vw;
-    padding-right: 2vw;
+@media screen and (max-width: 1000px) {
+    .index_about_image,
+    ._index_about_image_background {
+        display: none;
+    }
+
+    .index_about_text {
+        width: 100%;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
 }

@@ -34,3 +34,18 @@ footer {
     font-size: $title-font-size;
     font-family: $title-font-family;
 }
+
+ul {
+    padding-left: 0px;
+}
+
+.youtube-video {
+    width: 60vw;
+    height: 45vh;
+}
+
+@media screen and (max-width: 600px) {
+    .youtube-video {
+        width: 98vw;
+    }
+}

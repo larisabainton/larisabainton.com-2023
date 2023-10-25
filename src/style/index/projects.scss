@@ -2,6 +2,7 @@
     display: flex;
     overflow: hidden;
     height: 75vh;
+    text-align: center;
 }
 
 .index_projects_background {
@@ -32,4 +33,10 @@
 .index_projects_text {
     background-color: rgba(255,255,255,.7);
     width: fit-content;
+}
+
+@media screen and (max-width: 1000px) {
+    .index_projects {
+        height: 50vh;
+    }
 }

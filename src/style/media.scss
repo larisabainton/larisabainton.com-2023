@@ -54,7 +54,7 @@
         flex-direction: column;
     }
 
-    .media-page iframe {
+    .youtube-video {
         width: 98vw;
     }
 
@@ -75,5 +75,12 @@
 
     .production-photo--hover {
         display: none;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+    .production-photos_list-item,
+    .production-photo {
+        width: 45vw;
     }
 }
