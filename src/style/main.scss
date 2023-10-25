@@ -9,6 +9,7 @@
 @import 'calendar';
 @import 'contact';
 @import 'layout';
+@import 'media';
 @import 'projects';
 
 body {
@@ -27,4 +28,9 @@ footer {
     text-align: center;
     padding-top: 2vh;
     padding-bottom: 2vh;
+}
+
+.page_title {
+    font-size: $title-font-size;
+    font-family: $title-font-family;
 }
