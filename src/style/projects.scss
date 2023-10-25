@@ -1,12 +1,63 @@
 .projects-page {
+    flex: 2;
+}
+
+.projects-page_foreground {
+    position: relative;
     padding-top: $section-padding-vertical;
     padding-bottom: $section-padding-vertical;
     padding-left: $section-padding-horizontal;
     padding-right: $section-padding-horizontal;
-    flex: 2;
+    z-index: 5;
+}
+
+.projects-page_background { 
+    position: absolute;
+}
+
+.projects-page_title,
+.projects-page_subtitle,
+.projects-page_list-item_title {
+    background-color: rgba(255,255,255,.7);
+    width: fit-content;
 }
 
 .projects-page_title {
     font-family: $title-font-family;
     font-size: $title-font-size;
+}
+
+.projects-page_list-item {
+    padding-top: 10vh;
+}
+
+.projects-page_list-item:first-child {
+    padding-top: 7vh;
+}
+
+.projects-page_list-item_title {
+    font-family: $title-font-family;
+    font-size: 5vh;
+    margin-bottom: 3vh;
+}
+
+.projects-page_list-item_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+}
+
+.embroidery_list-item_image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.projects-page_list-item_list-item_description {
+    padding-top: 1.5vh;
+}
+
+.website_list-item embed {
+    width: 35vw;
+    height: 55vh;
 }

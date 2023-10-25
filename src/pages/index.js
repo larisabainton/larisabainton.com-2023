@@ -46,7 +46,7 @@ const calendarSection = (
 const projectsSection = (
     <div className="index_projects">
         <div className="index_projects_background">
-            <StaticImage src="../images/flowers/projects-background.png" className="index_projects_image"/>
+            <StaticImage placeholder="none" src="../images/flowers/projects-background.png" className="index_projects_image"/>
         </div>
         <div className="index_projects_foreground">
             <div className="index_projects_title">Projects</div>
@@ -59,7 +59,7 @@ const projectsSection = (
 const contactSection = (
     <div className="index_contact">
         <div className="index_contact_background">
-            <StaticImage src="../images/flowers/contact.png" className="index_contact_image"/>
+            <StaticImage placeholder="none" src="../images/flowers/contact.png" className="index_contact_image"/>
         </div>
         <div className="index_contact_foreground">
             <div className="index_contact_title">Contact</div>

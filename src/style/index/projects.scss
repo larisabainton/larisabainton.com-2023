@@ -1,7 +1,7 @@
 .index_projects {
     display: flex;
     overflow: hidden;
-    height: 100vh;
+    height: 75vh;
 }
 
 .index_projects_background {
@@ -28,3 +28,8 @@
     font-size: $title-font-size;
 }
 
+.index_projects_title,
+.index_projects_text {
+    background-color: rgba(255,255,255,.7);
+    width: fit-content;
+}
