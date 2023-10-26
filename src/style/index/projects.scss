@@ -12,6 +12,12 @@
     z-index: 1;
 }
 
+.index_projects_image {
+    z-index: 1;
+    animation-name: drop-down;
+    animation-duration: 2s;
+}
+
 .index_projects_foreground {
     position: relative;
     z-index: 7;

@@ -1,5 +1,6 @@
 .projects-page {
     flex: 2;
+    overflow-y: hidden;
 }
 
 .projects-page_foreground {
@@ -15,6 +16,12 @@
 
 .projects-page_background { 
     position: absolute;
+}
+
+.projects-page_flowers {
+    z-index: 1;
+    animation-name: drop-down;
+    animation-duration: 2s;
 }
 
 .projects-page_title,
@@ -65,6 +72,11 @@
 
 .projects-page_list-item_list-item_description {
     padding-top: 1.5vh;
+}
+
+.website_list-item {
+    display: flex;
+    flex-direction: column;
 }
 
 .website_list-item embed {

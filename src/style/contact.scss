@@ -5,7 +5,8 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    border-bottom: solid green 1px;
+    border-bottom: solid $accent-color 1px;
+    overflow-y: hidden;
 
     form {
         width: 60vw;
@@ -15,6 +16,12 @@
 .contact-page_foreground {
     display: flex;
     flex-direction: column;
+}
+
+.contact-page_image {
+    z-index: 1;
+    animation-name: slide-up;
+    animation-duration: 2s;
 }
 
 .contact-page_title {

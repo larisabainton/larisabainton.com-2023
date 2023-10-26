@@ -37,11 +37,11 @@ const webDesignSection =  () => {
             <ul className="projects-page_list-item_list website_list">
                 <li className="projects-page_list-item_list-item website_list-item">
                     <embed src="http://westendlyric.com" />
-                    <div className="projects-page_list-item_list-item_description website_list-item_description">West End Lyric</div>
+                    <a className="projects-page_list-item_list-item_description website_list-item_description text-link" href="http://www.westendlyric.com" target="_blank" rel="noreferrer">West End Lyric</a>
                 </li>
                 <li className="projects-page_list-item_list-item website_list-item">
                     <embed src="http://lessonswithlarisa.com" />
-                    <div className="projects-page_list-item_list-item_description website_list-item_description">Lessons with Larisa</div>
+                    <a className="projects-page_list-item_list-item_description website_list-item_description text-link" href="https://www.lessonswithlarisa.com" target="_blank" rel="noreferrer">Lessons with Larisa</a>
                 </li>
             </ul>
         </li>
@@ -74,7 +74,7 @@ const ProjectsPage = () => {
         <Layout>
             <main className="projects-page">
                 <div className="projects-page_background">
-                    <StaticImage src="../images/flowers/projects-background.png" placeholder="none" />
+                    <StaticImage className="projects-page_flowers" src="../images/flowers/projects-background.png" placeholder="none" />
                 </div>
                 <div className="projects-page_foreground">
                     <div className="projects-page_title">Projects</div>
