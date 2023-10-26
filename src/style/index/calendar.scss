@@ -1,9 +1,11 @@
 .index_calendar {
-
     padding-top: $section-padding-vertical;
     padding-bottom: $section-padding-vertical;
     padding-left: $section-padding-horizontal;
     padding-right: $section-padding-horizontal;
+    position: relative;
+    z-index: 2;
+    background-color: white;
 }
 
 .index_calendar_title {
@@ -12,8 +14,7 @@
 }
 
 .index_calendar_list-item {
-    border: 1px solid green;
-
+    border: 1px solid $accent-color;
 }
 
 // General Calendar
@@ -26,11 +27,6 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 3vh;
-
-    a {
-        text-decoration:none;
-        color: black;
-    }
 }
 
 
@@ -63,6 +59,19 @@ ul {
 
 .calendar_list-item_details_show-info {
     flex: 2;
+}
+
+.calendar_list-item {
+    a,
+    a:visited {
+        color: rgba(153,144,255);
+        font-weight: bold;
+    }
+
+    a:hover {
+        color: rgba(181,175,255);
+        font-weight: bold;
+    }
 }
 
 @media screen and (max-width: 1000px) {

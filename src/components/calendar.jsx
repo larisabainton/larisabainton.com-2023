@@ -5,7 +5,7 @@ const eventsList = [
         name: "Il Giuoco del Quadriglio",
         role: "Camilla",
         company: "West End Lyric",
-        companyLink: "www.westendlyric.com",
+        companyLink: "https://www.westendlyric.com",
         details: [
             {
                 location: "Somerville Music Spaces",
@@ -21,7 +21,7 @@ const eventsList = [
     {
         name: "Women of Tin Pan Alley Cabaret",
         company: "West End Lyric",
-        companyLink: "www.westendlyric.com",
+        companyLink: "https://www.westendlyric.com",
         details: [
             {
                 location: "The Boston Synagogue",
@@ -34,7 +34,7 @@ const eventsList = [
         name: "L'amico Fritz",
         role: "Caterina",
         company: "West End Lyric",
-        companyLink: "www.westendlyric.com",
+        companyLink: "https://www.westendlyric.com",
         details: [
             {
                 location: "Somerville Music Spaces",
@@ -87,11 +87,11 @@ const getEventListItems = (sourcePage) => {
                             <div className="calendar_list-item_show-info_name">{name}</div>
                             <div className="calendar_list-item_show-info_role">{role}</div>
                             <div className="calendar_list-item_company">
-                                <a href={companyLink}>{company}</a>
+                                <a className="text-link" href={companyLink}>{company}</a>
                             </div>
                         </div>
                         <div className="calendar_list-item_details_location">
-                            <a href={locationLink}>{location}</a>
+                            <a className="text-link" href={locationLink}>{location}</a>
                         </div>
                     </div>
                 </li>
