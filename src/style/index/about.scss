@@ -36,9 +36,28 @@
     padding-right: 2vw;
 }
 
+.index_about_blurb {
+    display: flex;
+    flex-direction: column;
+}
+
 .index_about_title {
     font-family: $title-font-family;
     font-size: $title-font-size;
+}
+
+.index_about_button {
+    text-align: center;
+    background-color: $accent-color;
+    align-self: center;
+    width: fit-content;
+    padding: 2%;
+    font-weight: bold;
+    color: white;
+}
+
+.index_about_button:hover {
+    background-color: $fade-accent-color;
 }
 
 @media screen and (max-width: 1000px) {
