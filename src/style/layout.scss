@@ -3,6 +3,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 1vh;
+    padding-top: 1vh;
     height: $header-height;
 }
 
@@ -16,6 +17,14 @@ header {
     font-family: $title-font-family;
     font-size: 5vh;
     padding-left: 1vw;
+}
+
+.header_menu {
+    display: none;
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
 }
 
 .header_links {
@@ -32,5 +41,9 @@ header {
 @media screen and (max-width: 950px) {
     .header_links {
         display: none;
+    }
+
+    .header_menu {
+        display: flex;
     }
 }
