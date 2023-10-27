@@ -71,6 +71,10 @@ header {
     color: $fade-accent-color;
 }
 
+.header_desktop-links a:hover {
+    color: $fade-accent-color;
+}
+
 .header_menu:hover .header_menu-links {
     display: flex;
 }
