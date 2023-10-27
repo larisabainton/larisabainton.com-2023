@@ -10,22 +10,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
-    .index_about_image_background {
-        border-radius: 50%;
-        max-width: 35vw;
-        position: absolute;
-        z-index: 2;
-    }
+.index_about_image_background {
+    border-radius: 50%;
+    max-width: 35vw;
+    position: absolute;
+    z-index: 2;
 }
 
 .index_about_image_foreground {
+    position: absolute;
+}
+
+.index_about_image_frame {
     position: relative;
-    z-index: 10;
-    animation-name: circle-grow;
-    animation-duration: 1.5s;
     width: 50vw;
-    right: -6px;
+    z-index: 10;
+}
+
+.index_about_image_frame--is-visible {
+    animation-name: circle-grow;
+    animation-duration: 2s;
 }
 
 .index_about_text {
