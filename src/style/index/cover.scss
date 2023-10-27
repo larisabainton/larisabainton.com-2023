@@ -23,7 +23,7 @@ $cover-photo-height: 100vh - $header-height;
     top: 0vh;
     right: 0vw;
     animation-name: slide-down-diagonal;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
 }
 
 .index_cover_flowers_bottom {
@@ -32,7 +32,7 @@ $cover-photo-height: 100vh - $header-height;
     left: 0vw;
     width: 45vw;
     animation-name: slide-up-diagonal;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
 }
 
 @media screen and (min-width: 1300px) {

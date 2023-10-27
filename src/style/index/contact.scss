@@ -22,6 +22,9 @@
 
 .index_contact_image {
     z-index: 1;
+}
+
+.index_contact_image--is-visible {
     animation-name: slide-up;
     animation-duration: 2s;
 }
