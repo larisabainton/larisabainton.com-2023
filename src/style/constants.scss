@@ -53,20 +53,18 @@ $links-color--hover: rgba(244,157,157);
 
 @keyframes circle-grow {
     0% {
-        width: 40vw;
-        opacity: 0%;
+        width: 5vw;
+        opacity: 0;
         z-index: 1;
     }
     25% {
         opacity: 1;
-        z-index:1;
     }
     99% {
         z-index: 1;
     }
     100% {
         width: 50vw;
-        opacity: 100%;
         z-index:10;
     }
 }

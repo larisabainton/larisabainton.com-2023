@@ -1,4 +1,3 @@
-import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 
 const eventsList = [
@@ -81,8 +80,6 @@ const getEventListItems = (sourcePage) => {
             return (
                 <li className={sourcePage + "_calendar_list-item calendar_list-item"} key={i}>
                     <div className="calendar_list-item_background">
-                        <StaticImage alt="" placeholder="" src="../images/flowers/calendar-corner_bl.png" className="calendar_list-item_flowers calendar_flowers_bottom-left"/>
-                        <StaticImage alt="" placeholder="" src="../images/flowers/calendar-corner_br.png" className="calendar_list-item_flowers calendar_flowers_bottom-right"/>
                     </div>
                     <div className="calendar_list-item_foreground">
                         {formatDate(date)}
