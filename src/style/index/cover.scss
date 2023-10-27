@@ -17,6 +17,11 @@ $cover-photo-height: 100vh - $header-height;
     z-index: 7;
 }
 
+.index_cover_flowers_top .gatsby-image-wrapper,
+.index_cover_flowers_bottom .gatsby-image-wrapper {
+    position: absolute;
+}
+
 .index_cover_flowers_top {
     position: absolute;
     width: 45vw;
