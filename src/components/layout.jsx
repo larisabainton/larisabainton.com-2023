@@ -2,20 +2,31 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
+const pageLinks = (className) => {
+    return (
+        <ul className={`${className} header_links`}>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/calendar">Calendar</Link></li>
+            <li><Link to="/projects">Projects</Link></li>
+            <li><Link to="/media">Media</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+        </ul>
+    )
+}
+
 const header = (
     <header>
         <div className="header_title">Larisa Bainton</div>
+
+        {/* mobile */}
         <div className="header_menu">
             <StaticImage className="menu_image" src="../images/menu.svg" />
+            {pageLinks("header_menu-links")}
         </div>
-        <div className="header_links">
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/calendar">Calendar</Link>
-            <Link to="/projects">Projects</Link>
-            <Link to="/media">Media</Link>
-            <Link to="/contact">Contact</Link>
-        </div>
+
+        {/* desktop */}
+        {pageLinks("header_desktop-links")}
     </header>
 )
 

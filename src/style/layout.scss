@@ -1,16 +1,16 @@
+$menu-border: 1px solid $accent-color;
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 1vh;
-    padding-top: 1vh;
     height: $header-height;
 }
 
 footer,
 header {
     background-color: white;
-    z-index: 2;
+    z-index: 20;
 }
 
 .header_title {
@@ -19,31 +19,77 @@ header {
     padding-left: 1vw;
 }
 
-.header_menu {
-    display: none;
-    height: 50px;
-    width: 50px;
-    align-items: center;
-    justify-content: center;
-}
-
-.header_links {
+.header_desktop-links {
     display: flex;
     gap: 2vw;
     padding-right: 2vw;
 }
 
+
+/* universal */
 .header_links a,
 .header_links a:visited {
     color: black;
 }
 
+
+/* mobile */
+
+.header_menu {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+}
+
+.menu_image {
+    height: 50px;
+    width: 50px;
+    margin-right: 2vw;
+}
+
+.header_menu-links {
+    display: none;
+    flex-direction: column;
+    z-index: 20;
+    position: absolute;
+    background-color: white;
+    border-left: $menu-border;
+    border-bottom: $menu-border;
+    top: $header-height;
+    right: 0px;
+    padding-right: 2vw;
+    padding-left: 2vw;
+    padding-bottom: 2%;
+    gap: 1vh;
+}
+
+.header_menu-links li {
+    text-align: right;
+}
+
+.header_menu a:hover {
+    color: $fade-accent-color;
+}
+
+.header_menu:hover .header_menu-links {
+    display: flex;
+}
+
 @media screen and (max-width: 950px) {
-    .header_links {
+    .header_desktop-links {
         display: none;
     }
 
     .header_menu {
         display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .menu_image {
+        width: 40px;
+        height: 40px;
     }
 }
