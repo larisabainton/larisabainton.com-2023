@@ -8,7 +8,7 @@ const ContactPage = () => {
         <Layout>
             <main className="contact-page">
                 <div className="contact-page_background">
-                    <StaticImage src="../images/flowers/contact.png" placeholder="none" className="contact-page_image"/>
+                    <StaticImage alt="" src="../images/flowers/contact.png" placeholder="none" className="contact-page_image"/>
                 </div>
                 <div className="contact-page_foreground">
                     <div className="contact-page_title">Contact</div>

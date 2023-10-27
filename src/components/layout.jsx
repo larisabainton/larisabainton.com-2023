@@ -21,7 +21,7 @@ const header = (
 
         {/* mobile */}
         <div className="header_menu">
-            <StaticImage placeholder="none" className="menu_image" src="../images/menu.svg" />
+            <StaticImage alt="" placeholder="none" className="menu_image" src="../images/menu.svg" />
             {pageLinks("header_menu-links")}
         </div>
 

@@ -8,22 +8,22 @@ const embroiderySection = () => {
             <div className="projects-page_list-item_title embroidery_title">Embroidery</div>
             <ul className="projects-page_list-item_list embroidery_list">
                 <li className="projects-page_list-item_list-item embroidery_list-item">
-                    <StaticImage src="../images/embroidery/1.png" className="embroidery_list-item_image" />
+                    <StaticImage alt="" src="../images/embroidery/1.png" className="embroidery_list-item_image" />
                 </li>
                 <li className="projects-page_list-item_list-item embroidery_list-item">
-                    <StaticImage src="../images/embroidery/2.png" className="embroidery_list-item_image" />
+                    <StaticImage alt="" src="../images/embroidery/2.png" className="embroidery_list-item_image" />
                 </li>
                 <li className="projects-page_list-item_list-item embroidery_list-item">
-                    <StaticImage src="../images/embroidery/3.png" className="embroidery_list-item_image" />
+                    <StaticImage alt="" src="../images/embroidery/3.png" className="embroidery_list-item_image" />
                 </li>
                 <li className="projects-page_list-item_list-item embroidery_list-item">
-                    <StaticImage src="../images/embroidery/4.png" className="embroidery_list-item_image" />
+                    <StaticImage alt="" src="../images/embroidery/4.png" className="embroidery_list-item_image" />
                 </li>
                 <li className="projects-page_list-item_list-item embroidery_list-item">
-                    <StaticImage src="../images/embroidery/5.png" className="embroidery_list-item_image" />
+                    <StaticImage alt="" src="../images/embroidery/5.png" className="embroidery_list-item_image" />
                 </li>
                 <li className="projects-page_list-item_list-item embroidery_list-item">
-                    <StaticImage src="../images/embroidery/6.png" className="embroidery_list-item_image" />
+                    <StaticImage alt="" src="../images/embroidery/6.png" className="embroidery_list-item_image" />
                 </li>
             </ul>
         </li>
@@ -58,9 +58,9 @@ const digitalMediaSection = () => {
                         src="https://www.youtube.com/embed/tWrpSYMKR0c?si=5F5Q8YUO8EOKbbJk" 
                         className="youtube-video"
                         title="YouTube video player" 
-                        frameborder="0" 
+                        frameBorder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen>
+                        allowFullScreen>
                     </iframe>
                     <div className="projects-page_list-item_list-item_description digital-media_list-item_description">Producer, Video Engineer, Audio Engineer</div>
                 </li>
@@ -74,7 +74,7 @@ const ProjectsPage = () => {
         <Layout>
             <main className="projects-page">
                 <div className="projects-page_background">
-                    <StaticImage className="projects-page_flowers" src="../images/flowers/projects-background.png" placeholder="none" />
+                    <StaticImage alt="" className="projects-page_flowers" src="../images/flowers/projects-background.png" placeholder="none" />
                 </div>
                 <div className="projects-page_foreground">
                     <div className="projects-page_title">Projects</div>
