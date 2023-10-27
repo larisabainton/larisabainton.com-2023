@@ -1,8 +1,13 @@
 .index_about {
     display: flex;
+    height: 50vh;
     width: 100%;
     padding-top: $section-padding-vertical;
     padding-bottom: $section-padding-vertical;
+
+    .gatsby-image-wrapper img {
+        object-fit: contain;
+    }
 }
 
 .index_about_image {
@@ -14,9 +19,10 @@
 
 .index_about_image_background {
     border-radius: 50%;
-    max-width: 35vw;
+    width: 35vw;
     position: absolute;
     z-index: 2;
+    max-width: 400px;
 }
 
 .index_about_image_foreground {
@@ -26,7 +32,9 @@
 .index_about_image_frame {
     position: relative;
     width: 50vw;
+    max-width: 555px;
     z-index: 10;
+    max-height: 80vh;
 }
 
 .index_about_image_frame--is-visible {
@@ -69,6 +77,10 @@
 }
 
 @media screen and (max-width: 1000px) {
+    .index_about {
+        height: auto;
+    }
+    
     .index_about_image,
     ._index_about_image_background {
         display: none;

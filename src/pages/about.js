@@ -7,7 +7,9 @@ const AboutPage = () => {
         <Layout>
             <main className="about-page">
                 <div className="about_image">
-                    <StaticImage placeholder="none" src="../images/flowers/about_frame.png" alt="" className="about_image_foreground"/>
+                     <div className="about_image_foreground">
+                        <StaticImage placeholder="none" src="../images/flowers/about_frame.png" alt="" className="about_image_frame"/>
+                    </div>
                     <StaticImage src="../images/about.jpg" alt="Larisa smiling and sitting on a bench" className="about_image_background"/>
                 </div>
                 <div className="about_text">
