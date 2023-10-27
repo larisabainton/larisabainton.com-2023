@@ -23,53 +23,51 @@ $links-color--hover: rgba(244,157,157);
 
 @keyframes slide-up-diagonal {
     0% {
-        bottom: -10000vh;
-        left: -10000vw;
+        bottom: -100vh;
+        left: -100vw;
         opacity: 0;
     }
-    75% {
-        opacity: 0
+    50% {
+        opacity: 1
     }
     100% {
         bottom: 0vh;
         left: 0vw;
-        opacity: 1;
     }
 }
 
 @keyframes slide-down-diagonal {
     0% {
-        top: -10000vh;
-        right: -10000vw;
+        top: -100vh;
+        right: -100vw;
         opacity: 0;
     }
     75% { 
-        opacity: 0
+        opacity: 1
     }
     100% {
         top: 0vh;
         right: 0vw;
-        opacity: 1;
     }
 }
 
 @keyframes circle-grow {
     0% {
-        width: 40vw;
+        width: 0%;
         opacity: 0%;
         z-index: 1;
     }
-    50% {
-        opacity: 0;
+    25% {
+        opacity: 1;
         z-index:1;
     }
     99% {
         z-index: 1;
     }
     100% {
-        width: 50vw;
+        width: 100%;
         opacity: 100%;
-        z-index:10
+        z-index:10;
     }
 }
 
