@@ -20,3 +20,5 @@ const ContactPage = () => {
 }
 
 export default ContactPage;
+
+export const Head = () => <title>Larisa Bainton | Contact</title>

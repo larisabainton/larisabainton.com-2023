@@ -8,7 +8,7 @@ const AboutPage = () => {
             <main className="about-page">
                 <div className="about_image">
                      <div className="about_image_foreground">
-                        <StaticImage placeholder="none" src="../images/flowers/about_frame.png" alt="" className="about_image_frame"/>
+                        <StaticImage imgStyle={{"object-fit": "contain"}}placeholder="none" src="../images/flowers/about_frame.png" alt="" className="about_image_frame"/>
                     </div>
                     <StaticImage src="../images/about.jpg" alt="Larisa smiling and sitting on a bench" className="about_image_background"/>
                 </div>
@@ -37,3 +37,5 @@ const AboutPage = () => {
 }
 
 export default AboutPage;
+
+export const Head = () => <title>Larisa Bainton | About</title>

@@ -15,3 +15,5 @@ const CalendarPage = () => {
 }
 
 export default CalendarPage;
+
+export const Head = () => <title>Larisa Bainton | Calendar</title>

@@ -19,6 +19,12 @@ header {
     padding-left: 1vw;
 }
 
+.header_title a,
+.header_title a:hover,
+.header_title a:visited {
+    color: black;
+}
+
 .header_desktop-links {
     display: flex;
     gap: 2vw;

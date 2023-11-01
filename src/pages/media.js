@@ -108,3 +108,5 @@ const MediaPage = () => {
 }
 
 export default MediaPage;
+
+export const Head = () => <title>Larisa Bainton | Media</title>

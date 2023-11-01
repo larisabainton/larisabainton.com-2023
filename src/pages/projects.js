@@ -92,3 +92,5 @@ const ProjectsPage = () => {
 }
 
 export default ProjectsPage;
+
+export const Head = () => <title>Larisa Bainton | Projects</title>
