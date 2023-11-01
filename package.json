@@ -12,7 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "deploy": "gatsby build && echo 'larisabainton.com' > ./public/CNAME && gh-pages -d public pages"
   },
   "dependencies": {
     "gatsby": "^5.12.4",
