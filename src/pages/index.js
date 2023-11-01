@@ -15,8 +15,8 @@ const coverSection = (
             <StaticImage className="index_cover_photo" src="../images/cover.jpg" alt="Larisa standing in front of a tree" />
         </div>
         <div className="index_cover_foreground">
-            <StaticImage placeholder="none" className="index_cover_flowers_top" src="../images/flowers/cover_top-right.png" alt="" />
-            <StaticImage placeholder="none" className="index_cover_flowers_bottom" src="../images/flowers/cover_bottom-left.png" alt="" />
+            <StaticImage style={{position: "absolute"}} placeholder="none" className="index_cover_flowers_top" src="../images/flowers/cover_top-right.png" alt="" />
+            <StaticImage style={{position: "absolute"}} placeholder="none" className="index_cover_flowers_bottom" src="../images/flowers/cover_bottom-left.png" alt="" />
         </div>
     </div>
 )
