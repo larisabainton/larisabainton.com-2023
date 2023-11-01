@@ -36,11 +36,11 @@ const webDesignSection =  () => {
             <div className="projects-page_list-item_title website_title">Web Developer & Designer</div>
             <ul className="projects-page_list-item_list website_list">
                 <li className="projects-page_list-item_list-item website_list-item">
-                    <embed src="http://westendlyric.com" />
+                    <embed src="https://westendlyric.com" />
                     <a className="projects-page_list-item_list-item_description website_list-item_description text-link" href="http://www.westendlyric.com" target="_blank" rel="noreferrer">West End Lyric</a>
                 </li>
                 <li className="projects-page_list-item_list-item website_list-item">
-                    <embed src="http://lessonswithlarisa.com" />
+                    <embed src="https://lessonswithlarisa.com" />
                     <a className="projects-page_list-item_list-item_description website_list-item_description text-link" href="https://www.lessonswithlarisa.com" target="_blank" rel="noreferrer">Lessons with Larisa</a>
                 </li>
             </ul>
