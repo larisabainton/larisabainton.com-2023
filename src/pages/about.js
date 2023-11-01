@@ -1,6 +1,8 @@
-import React from "react";
+import React from "react"
 import { StaticImage } from "gatsby-plugin-image";
-import Layout from "../components/layout";
+import '../style/main.scss';
+
+import Layout from "../components/layout"
 
 const AboutPage = () => {
     return (
