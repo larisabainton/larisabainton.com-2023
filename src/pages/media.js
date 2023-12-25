@@ -1,110 +1,57 @@
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import '../style/main.scss';
 
 import Layout from "../components/layout"
 import SEO from "../components/SEO"; // eslint-disable-line
+import { graphql } from "gatsby";
 
-const MediaPage = () => {
+const MediaPage = ({ data }) => {
+    const photoData = data.allContentfulProductionPhoto.nodes;
+    const videoData = data.allContentfulPerformanceVideo.nodes;
+    
     return (
         <Layout>
             <main className="media-page page">
                 <div className="media-page_videos">
                     <div className="media-page_title page_title">Videos</div>
                     <ul className="media-page_list">
-                        <li className="media-page_list-item">
-                            <iframe 
-                                src="https://www.youtube.com/embed/oNngx0GyYqE?si=fSK5XifvQUtN60A1" 
-                                className="youtube-video"
-                                title="YouTube video player" 
-                                frameBorder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                allowFullScreen>
-                            </iframe>
-                            <div className="media-page_list-item_title">Injurious Hermia, Midsummer Night's Dream (Britten)</div>
-                            <div className="media-page_list-item_description">Miami Music Festival, 2022</div>
-                        </li>
+                        {videoData.map(({ name, show, composer, description, videoLink}, i) => {
+                            return (
+                                <li className="media-page_list-item" key={`video-${i}`}>
+                                    <iframe 
+                                        src={videoLink}
+                                        className="youtube-video"
+                                        title="YouTube video player"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        allowFullScreen>
+                                    </iframe>
+                                    <div className="media-page_list-item_title">{`${name}, ${show} (${composer})`}</div>
+                                    <div className="media-page_list-item_description">{description}</div>
+                                </li>
+                            )
+                        })}
                     </ul>
                 </div>
                 
                 <div className="media-page_photos">
                     <div className="media-page_title page_title">Photos</div>
                     <ul className="media-page_list production-photos">
-                        <li className="media-page_list-item production-photos_list-item">
-                            <StaticImage alt="" src="../images/production-photos/1.jpg" className="production-photo"/>
-                            <div className="production-photo--hover">
-                                <div className="production-photo--hover_text">Helena, Midsummer Night's Dream</div>
-                            </div>
-                        </li>
-                        <li className="media-page_list-item production-photos_list-item">
-                            <StaticImage alt="" src="../images/production-photos/2.jpg" className="production-photo"/>
-                            <div className="production-photo--hover">
-                                <div className="production-photo--hover_text">Helena, Midsummer Night's Dream</div>
-                            </div>
-                        </li>
-                        <li className="media-page_list-item production-photos_list-item">
-                            <StaticImage alt="" src="../images/production-photos/3.jpg" className="production-photo"/>
-                            <div className="production-photo--hover">
-                                <div className="production-photo--hover_text">Helena, Midsummer Night's Dream</div>
-                            </div>
-                        </li>
-                        <li className="media-page_list-item production-photos_list-item">
-                            <StaticImage alt="" src="../images/production-photos/4.jpg" className="production-photo"/>
-                            <div className="production-photo--hover">
-                                <div className="production-photo--hover_text">Helena, Midsummer Night's Dream</div>
-                            </div>
-                        </li>
-                        <li className="media-page_list-item production-photos_list-item">
-                            <StaticImage alt="" src="../images/production-photos/5.jpg" className="production-photo"/>
-                            <div className="production-photo--hover">
-                                <div className="production-photo--hover_text">Helena, Midsummer Night's Dream</div>
-                            </div>
-                        </li>
-                        <li className="media-page_list-item production-photos_list-item">
-                            <StaticImage alt="" src="../images/production-photos/6.jpg" className="production-photo"/>
-                            <div className="production-photo--hover">
-                                <div className="production-photo--hover_text">Helena, Midsummer Night's Dream</div>
-                            </div>
-                        </li>
-                        <li className="media-page_list-item production-photos_list-item">
-                            <StaticImage alt="" src="../images/production-photos/7.jpg" className="production-photo"/>
-                            <div className="production-photo--hover">
-                                <div className="production-photo--hover_text">Helena, Midsummer Night's Dream</div>
-                            </div>
-                        </li>
-                        <li className="media-page_list-item production-photos_list-item">
-                            <StaticImage alt="" src="../images/production-photos/8.jpg" className="production-photo"/>
-                            <div className="production-photo--hover">
-                                <div className="production-photo--hover_text">Helena, Midsummer Night's Dream</div>
-                            </div>
-                        </li>
-                        <li className="media-page_list-item production-photos_list-item">
-                            <StaticImage alt="" src="../images/production-photos/9.jpg" className="production-photo"/>
-                            <div className="production-photo--hover">
-                                <div className="production-photo--hover_text">Helena, Midsummer Night's Dream</div>
-                            </div>
-                        </li>
-                        <li className="media-page_list-item production-photos_list-item">
-                            <StaticImage alt="" src="../images/production-photos/10.jpg" className="production-photo"/>
-                            <div className="production-photo--hover">
-                                <div className="production-photo--hover_text">Helena, Midsummer Night's Dream</div>
-                            </div>
-                        </li>
-                        <li className="media-page_list-item production-photos_list-item">
-                            <StaticImage alt="" src="../images/production-photos/11.jpg" className="production-photo"/>
-                            <div className="production-photo--hover">
-                                <div className="production-photo--hover_text">Helena, Midsummer Night's Dream</div>
-                            </div>
-                        </li>
-                        <li className="media-page_list-item production-photos_list-item">
-                            <StaticImage alt="" src="../images/production-photos/12.png" className="production-photo"/>
-                            <div className="production-photo--hover">
-                                <div className="production-photo--hover_text">Gretel, Hänsel und Gretel</div>
-                            </div>
-                        </li>
+                        {photoData.map(({ name, photos, id }) => {
+                            return photos.map((photo, i) => {
+                                return (
+                                    <li className="media-page_list-item production-photos_list-item" key={`production-photo-${id}-${i}`}>
+                                        <GatsbyImage alt="" className="production-photo" image={getImage(photo)}/>
+                                        <div className="production-photo--hover">
+                                            <div className="production-photo--hover_text">{name}</div>
+                                        </div>
+                                    </li>
+                                )
+                            })
+                        })}
                     </ul>
                 </div>
-                
             </main>
         </Layout>
     )
@@ -113,3 +60,26 @@ const MediaPage = () => {
 export default MediaPage;
 
 export const Head = () => <SEO title="Larisa Bainton | Media" /> // eslint-disable-line
+
+export const query = graphql`
+query MediaPageQuery {
+    allContentfulProductionPhoto(sort: {date: DESC}) {
+        nodes {
+            name
+            id
+            photos {
+                gatsbyImageData
+            }
+        }
+    }
+    allContentfulPerformanceVideo {
+        nodes {
+            name
+            show
+            composer
+            description
+            videoLink
+        }
+    }
+}
+`
