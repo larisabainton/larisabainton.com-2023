@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
@@ -52,6 +56,15 @@ module.exports = {
         name: `images`,
         // Path to the directory
         path: `${__dirname}/src/images/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `mr7omzmlt2ii`,
+        environment: "master",
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
   ]
