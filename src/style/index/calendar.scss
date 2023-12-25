@@ -53,11 +53,16 @@ ul {
     font-size: 3vh;
 }
 
-.calendar_list-item_details_date {
+.calendar_list-item_performances_date,
+.calendar_list-item_performances_venue {
     flex: 1;
 }
 
-.calendar_list-item_details_show-info {
+.calendar_list-item_performances_venue {
+    text-align: right
+}
+
+.calendar_list-item_performances_show-info {
     flex: 2;
 }
 
@@ -79,11 +84,11 @@ ul {
         flex-direction: column;
     }
 
-    .calendar_list-item_details_show-info {
+    .calendar_list-item_performances_show-info {
         text-align: center;
     }
 
-    .calendar_list-item_details_date {
+    .calendar_list-item_performances_date {
         text-align: center;
     }
 }

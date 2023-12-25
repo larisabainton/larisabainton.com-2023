@@ -3,6 +3,9 @@
     padding-bottom: $section-padding-vertical;
     padding-left: $section-padding-horizontal;
     padding-right: $section-padding-horizontal;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
 }
 
 .calendar-page_calendar_title {

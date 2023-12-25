@@ -4,11 +4,12 @@ import '../style/main.scss';
 
 import Layout from "../components/layout"
 import Calendar from "../components/calendar";
-import SEO from "../components/SEO";
+import SEO from "../components/SEO"; // eslint-disable-line
 
 import AboutSection from "../components/AboutSection";
 import ContactSection from "../components/ContactSection";
 import ProjectsSection from "../components/ProjectsSection";
+import { graphql } from "gatsby";
 
 const coverSection = (
     <div className="index_cover">
@@ -22,27 +23,57 @@ const coverSection = (
     </div>
 )
 
-const calendarSection = (
-    <div className="index_calendar">
-        <div className="index_calendar_title">Events</div>
-        <Calendar sourcePage="index" />
-    </div>
-);
 
-const IndexPage = () => {
-  return (
-    <Layout>
-        <main className="index">
-            {coverSection}
-            <AboutSection />
-            {calendarSection}
-            <ProjectsSection />
-            <ContactSection />
-        </main>
-    </Layout>
+const IndexPage = ({ data }) => {
+    const upcomingEvents = []
+    
+    data.allContentfulEvent.nodes.forEach(event => {
+        event.performances.forEach(({ date }) => {
+            const isUpcomingEvent = (new Date(date).getTime() - new Date().getTime() > 0)
+            const eventIsInArray = upcomingEvents.find(upcomingEvent => upcomingEvent.id === event.id)
+
+            if (isUpcomingEvent & !eventIsInArray) {
+                upcomingEvents.push(event);
+            }
+        })
+    })
+
+
+    return (
+        <Layout>
+            <main className="index">
+                {coverSection}
+                <AboutSection />
+                <div className="index_calendar">
+                    <div className="index_calendar_title">Upcoming Events</div>
+                    <Calendar sourcePage="index" eventsList={upcomingEvents}/>
+                </div>
+                <ProjectsSection />
+                <ContactSection />
+            </main>
+        </Layout>
     )
 }
 
 export default IndexPage
 
-export const Head = () => <SEO />
+export const Head = () => <SEO /> // eslint-disable-line
+
+export const query = graphql`
+    query IndexQuery {
+        allContentfulEvent(sort: {performances: {date: ASC}}) {
+            nodes {
+                company
+                companyLink
+                id
+                name
+                role
+                performances {
+                    date
+                    venue
+                    venueLink
+                    id
+                }
+            }
+        }
+    }`
