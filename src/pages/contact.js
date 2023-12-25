@@ -4,7 +4,7 @@ import '../style/main.scss';
 
 import Layout from "../components/layout"
 import ContactForm from "../components/contactForm";
-import SEO from "../components/SEO";
+import SEO from "../components/SEO"; // eslint-disable-line
 
 const ContactPage = () => {
     return (
@@ -24,4 +24,4 @@ const ContactPage = () => {
 
 export default ContactPage;
 
-export const Head = () => <SEO title="Larisa Bainton | Contact"/>
+export const Head = () => <SEO title="Larisa Bainton | Contact"/> // eslint-disable-line

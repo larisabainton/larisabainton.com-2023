@@ -3,7 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import '../style/main.scss';
 
 import Layout from "../components/layout"
-import SEO from "../components/SEO";
+import SEO from "../components/SEO"; // eslint-disable-line
 
 const AboutPage = () => {
     return (
@@ -41,4 +41,4 @@ const AboutPage = () => {
 
 export default AboutPage;
 
-export const Head = () => <SEO title="Larisa Bainton | About"/>
+export const Head = () => <SEO title="Larisa Bainton | About"/> // eslint-disable-line
