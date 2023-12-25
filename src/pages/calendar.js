@@ -3,6 +3,7 @@ import '../style/main.scss';
 
 import Layout from "../components/layout"
 import Calendar from "../components/calendar";
+import SEO from "../components/SEO";
 
 const CalendarPage = () => {
     return (
@@ -17,4 +18,4 @@ const CalendarPage = () => {
 
 export default CalendarPage;
 
-export const Head = () => <title>Larisa Bainton | Calendar</title>
+export const Head = () => <SEO title= "Larisa Bainton | Calendar" />

@@ -3,6 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import '../style/main.scss';
 
 import Layout from "../components/layout"
+import SEO from "../components/SEO";
 
 const embroiderySection = () => {
     return (
@@ -95,4 +96,4 @@ const ProjectsPage = () => {
 
 export default ProjectsPage;
 
-export const Head = () => <title>Larisa Bainton | Projects</title>
+export const Head = () => <SEO title="Larisa Bainton | Projects"/>

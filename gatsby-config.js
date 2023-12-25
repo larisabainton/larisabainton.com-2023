@@ -4,7 +4,9 @@
 module.exports = {
   siteMetadata: {
     title: `Larisa Bainton`,
-    siteUrl: `https://www.larisabainton.com`
+    siteUrl: `https://www.larisabainton.com`,
+    description: "Follow for soprano Larisa Bainton's upcoming performances and creative projects",
+    keywords: "soprano, Boston, art, Larisa Bainton, Larisa, Bainton, music, voice, opera, guitar, piano"
   },
   plugins: [
     "gatsby-plugin-sass",

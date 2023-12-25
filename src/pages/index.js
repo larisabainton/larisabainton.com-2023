@@ -4,6 +4,7 @@ import '../style/main.scss';
 
 import Layout from "../components/layout"
 import Calendar from "../components/calendar";
+import SEO from "../components/SEO";
 
 import AboutSection from "../components/AboutSection";
 import ContactSection from "../components/ContactSection";
@@ -44,4 +45,4 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <title>Larisa Bainton</title>
+export const Head = () => <SEO />

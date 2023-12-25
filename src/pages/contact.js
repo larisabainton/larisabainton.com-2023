@@ -4,6 +4,7 @@ import '../style/main.scss';
 
 import Layout from "../components/layout"
 import ContactForm from "../components/contactForm";
+import SEO from "../components/SEO";
 
 const ContactPage = () => {
     return (
@@ -23,4 +24,4 @@ const ContactPage = () => {
 
 export default ContactPage;
 
-export const Head = () => <title>Larisa Bainton | Contact</title>
+export const Head = () => <SEO title="Larisa Bainton | Contact"/>

@@ -3,6 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import '../style/main.scss';
 
 import Layout from "../components/layout"
+import SEO from "../components/SEO";
 
 const MediaPage = () => {
     return (
@@ -111,4 +112,4 @@ const MediaPage = () => {
 
 export default MediaPage;
 
-export const Head = () => <title>Larisa Bainton | Media</title>
+export const Head = () => <SEO title="Larisa Bainton | Media" />
