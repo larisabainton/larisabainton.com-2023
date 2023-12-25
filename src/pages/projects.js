@@ -1,33 +1,23 @@
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import '../style/main.scss';
 
 import Layout from "../components/layout"
 import SEO from "../components/SEO"; // eslint-disable-line
+import { graphql } from "gatsby";
 
-const embroiderySection = () => {
+const embroiderySection = (photos) => {
     return (
         <li className="projects-page_list-item embroidery">
             <div className="projects-page_list-item_title embroidery_title">Embroidery</div>
             <ul className="projects-page_list-item_list embroidery_list">
-                <li className="projects-page_list-item_list-item embroidery_list-item">
-                    <StaticImage alt="" src="../images/embroidery/1.png" className="embroidery_list-item_image" />
-                </li>
-                <li className="projects-page_list-item_list-item embroidery_list-item">
-                    <StaticImage alt="" src="../images/embroidery/2.png" className="embroidery_list-item_image" />
-                </li>
-                <li className="projects-page_list-item_list-item embroidery_list-item">
-                    <StaticImage alt="" src="../images/embroidery/3.png" className="embroidery_list-item_image" />
-                </li>
-                <li className="projects-page_list-item_list-item embroidery_list-item">
-                    <StaticImage alt="" src="../images/embroidery/4.png" className="embroidery_list-item_image" />
-                </li>
-                <li className="projects-page_list-item_list-item embroidery_list-item">
-                    <StaticImage alt="" src="../images/embroidery/5.png" className="embroidery_list-item_image" />
-                </li>
-                <li className="projects-page_list-item_list-item embroidery_list-item">
-                    <StaticImage alt="" src="../images/embroidery/6.png" className="embroidery_list-item_image" />
-                </li>
+                {photos.map((photo, i) => {
+                    return (
+                        <li className="projects-page_list-item_list-item embroidery_list-item" key={`embroidery-${i}`}>
+                            <GatsbyImage alt="" className="embroidery_list-item_image" image={getImage(photo)}/>
+                        </li>
+                    )
+                })}
             </ul>
         </li>
     )
@@ -72,7 +62,7 @@ const digitalMediaSection = () => {
     )
 }
 
-const ProjectsPage = () => {
+const ProjectsPage = ({ data }) => {
     return (
         <Layout>
             <main className="projects-page">
@@ -85,7 +75,7 @@ const ProjectsPage = () => {
                     <ul className="projects-page_list">
                         {digitalMediaSection()}
                         {webDesignSection()}
-                        {embroiderySection()}                    
+                        {embroiderySection(data.allContentfulEmbroidery.nodes[0].photos)}                    
                     </ul>
                 </div>
                 
@@ -97,3 +87,15 @@ const ProjectsPage = () => {
 export default ProjectsPage;
 
 export const Head = () => <SEO title="Larisa Bainton | Projects"/> // eslint-disable-line
+
+export const query = graphql`
+query ProjectsPageQuery {
+    allContentfulEmbroidery {
+        nodes {
+            photos {
+                gatsbyImageData
+            }
+        }
+    }
+}
+`
