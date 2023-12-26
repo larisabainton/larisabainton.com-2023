@@ -42,7 +42,7 @@ const MediaPage = ({ data }) => {
                             return photos.map((photo, i) => {
                                 return (
                                     <li className="media-page_list-item production-photos_list-item" key={`production-photo-${id}-${i}`}>
-                                        <GatsbyImage alt="" className="production-photo" image={getImage(photo)}/>
+                                        <GatsbyImage alt="" style={{ position: 'absolute'}} className="production-photo" image={getImage(photo)}/>
                                         <div className="production-photo--hover">
                                             <div className="production-photo--hover_text">{name}</div>
                                         </div>
