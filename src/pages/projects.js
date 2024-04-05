@@ -86,7 +86,7 @@ const ProjectsPage = ({ data }) => {
 
 export default ProjectsPage;
 
-export const Head = () => <SEO title="Larisa Bainton | Projects"/> // eslint-disable-line
+export const Head = () => <SEO title="Larisa Bainton Hernandez | Projects"/> // eslint-disable-line
 
 export const query = graphql`
 query ProjectsPageQuery {

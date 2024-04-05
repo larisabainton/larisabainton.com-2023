@@ -17,7 +17,7 @@ const AboutSection = () => {
             <div className="index_about_text">
                 <div className="index_about_title">About</div>
                 <div className="index_about_blurb">
-                    <p> Larisa Bainton, an emerging soprano, is celebrated for her captivating performances and profound emotional depth. Recognized by the 
+                    <p> Larisa Bainton Hernandez, an emerging soprano, is celebrated for her captivating performances and profound emotional depth. Recognized by the 
                         <em> Boston Globe</em>, 
                         <em> OperaWire</em>, 
                         <em> WBUR</em> and 

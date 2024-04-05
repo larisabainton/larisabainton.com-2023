@@ -18,7 +18,7 @@ const AboutPage = () => {
                 <div className="about_text">
                     <div className="about_title">About</div>
                     <div className="about_blurb">
-                        <p> Larisa Bainton, an emerging soprano, is celebrated for her captivating performances and profound emotional depth. Recognized by the <em> Boston Globe</em>, 
+                        <p> Larisa Bainton Hernandez, an emerging soprano, is celebrated for her captivating performances and profound emotional depth. Recognized by the <em> Boston Globe</em>, 
                     <em> OperaWire</em>, 
                     <em> WBUR</em> and 
                     <em> Bachtrack</em> for her pioneering work in the classical realm, Larisa has earned her place in the spotlight. In 2021, the <em> Eastman School of Music</em> named her one of the “Outstanding Eastman Women” for her groundbreaking digital production of Hänsel und Gretel.</p>
@@ -41,4 +41,4 @@ const AboutPage = () => {
 
 export default AboutPage;
 
-export const Head = () => <SEO title="Larisa Bainton | About"/> // eslint-disable-line
+export const Head = () => <SEO title="Larisa Bainton Hernandez | About"/> // eslint-disable-line

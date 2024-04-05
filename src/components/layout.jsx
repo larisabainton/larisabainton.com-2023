@@ -18,7 +18,7 @@ const pageLinks = (className) => {
 const header = (
     <header>
         <div className="header_title">
-            <Link to ="/">Larisa Bainton</Link>
+            <Link to ="/">Larisa Bainton Hernandez</Link>
         </div>
 
         {/* mobile */}

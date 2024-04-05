@@ -24,4 +24,4 @@ const ContactPage = () => {
 
 export default ContactPage;
 
-export const Head = () => <SEO title="Larisa Bainton | Contact"/> // eslint-disable-line
+export const Head = () => <SEO title="Larisa Bainton Hernandez | Contact"/> // eslint-disable-line

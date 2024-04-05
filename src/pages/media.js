@@ -59,7 +59,7 @@ const MediaPage = ({ data }) => {
 
 export default MediaPage;
 
-export const Head = () => <SEO title="Larisa Bainton | Media" /> // eslint-disable-line
+export const Head = () => <SEO title="Larisa Bainton Hernandez | Media" /> // eslint-disable-line
 
 export const query = graphql`
 query MediaPageQuery {

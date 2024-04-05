@@ -48,7 +48,7 @@ const CalendarPage = ({ data }) => {
 
 export default CalendarPage;
 
-export const Head = () => <SEO title= "Larisa Bainton | Calendar" /> // eslint-disable-line
+export const Head = () => <SEO title= "Larisa Bainton Hernandez | Calendar" /> // eslint-disable-line
 
 export const query = graphql`
     query CalendarQuery {
