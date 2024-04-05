@@ -4,6 +4,9 @@
     width: 100%;
     padding-top: $section-padding-vertical;
     padding-bottom: $section-padding-vertical;
+    background-color: white;
+    position: relative;
+    z-index: 2;
 }
 
 .index_about_image {
@@ -17,7 +20,7 @@
     border-radius: 50%;
     width: 35vw;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     max-width: 400px;
 }
 
