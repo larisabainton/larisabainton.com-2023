@@ -69,13 +69,22 @@ ul {
 .calendar_list-item {
     a,
     a:visited {
-        color: rgba(153,144,255);
-        font-weight: bold;
+        color: $links-color;
+        font-weight: 500;
     }
 
     a:hover {
-        color: rgba(181,175,255);
-        font-weight: bold;
+        color: $links-color--hover;
+        font-weight: 500;
+    }
+
+    .title-link,
+    .title-link:visited {
+        color: rgba(75, 128, 52);
+    }
+    
+    .title-link:hover {
+        color: rgba(93,158,64);
     }
 }
 

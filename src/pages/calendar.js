@@ -9,6 +9,7 @@ import SEO from "../components/SEO"; // eslint-disable-line
 const CalendarPage = ({ data }) => {
     const upcomingEvents = [];
     const pastEvents = [];
+    const eventLinks = data.allSitePage.nodes;
 
     data.allContentfulEvent.nodes.forEach(event => {
         event.performances.forEach(({ date }) => {
@@ -35,11 +36,11 @@ const CalendarPage = ({ data }) => {
             <main className="calendar-page">
                 <div>
                     <div className="calendar-page_calendar_title">Upcoming Events</div>
-                    <Calendar sourcePage="calendar-page" eventsList={upcomingEvents}/>
+                    <Calendar sourcePage="calendar-page" eventsList={upcomingEvents} eventLinks={eventLinks}/>
                 </div>
                 <div>
                     <div className="calendar-page_calendar_title">Past Events</div>
-                    <Calendar sourcePage="calendar-page" eventsList={pastEvents}/>
+                    <Calendar sourcePage="calendar-page" eventsList={pastEvents} eventLinks={eventLinks}/>
                 </div>
             </main>
         </Layout>
@@ -59,12 +60,19 @@ export const query = graphql`
                 name
                 id
                 role
+                createPage
                 performances {
                     date
                     venue
                     venueLink
                     id
                 }
+            }
+        }
+        allSitePage(filter: {path: {regex: "/events/"}}) {
+            nodes {
+                path
+                pageContext
             }
         }
     }`

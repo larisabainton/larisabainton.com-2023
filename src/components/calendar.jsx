@@ -1,5 +1,11 @@
 import React from "react";
 
+const pagePath = (name, id, eventLinks) => {
+    const page = eventLinks.find(page => page.pageContext.id === id);
+
+    return <a className="title-link" href={page.path}>{name}</a>
+}
+
 const formatDate = (dateString) => {
     const date = new Date(dateString);
 
@@ -24,11 +30,12 @@ const formatDate = (dateString) => {
     )
 }
 
-const Calendar = ({ sourcePage, eventsList }) => {
+const Calendar = ({ sourcePage, eventsList, eventLinks }) => {
     return (
         <ul className={sourcePage + "_events_calendar events_calendar"}>
             {eventsList.map((eventData) => {
-                const { name, role, company, companyLink, performances } = eventData;
+                const { name, id, role, company, companyLink, performances, createPage } = eventData;
+                const title = createPage ? pagePath(name, id, eventLinks) : name;
 
                 return performances && performances.map(({ venue, venueLink, date}, i) => {
                     return (
@@ -38,7 +45,7 @@ const Calendar = ({ sourcePage, eventsList }) => {
                             <div className="calendar_list-item_foreground">
                                 {formatDate(date)}
                                 <div className="calendar_list-item_performances_show-info">
-                                    <div className="calendar_list-item_show-info_name">{name}</div>
+                                    <div className="calendar_list-item_show-info_name">{title}</div>
                                     <div className="calendar_list-item_show-info_role">{role}</div>
                                     <div className="calendar_list-item_company">
                                         <a className="text-link" href={companyLink}>{company}</a>

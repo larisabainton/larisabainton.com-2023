@@ -27,6 +27,7 @@ const coverSection = (
 const IndexPage = ({ data }) => {
     const upcomingEvents = []
     
+    const eventLinks = data.allSitePage.nodes;
     data.allContentfulEvent.nodes.forEach(event => {
         event.performances.forEach(({ date }) => {
             const isUpcomingEvent = (new Date(date).getTime() - new Date().getTime() > 0)
@@ -46,7 +47,7 @@ const IndexPage = ({ data }) => {
                 <AboutSection />
                 <div className="index_calendar">
                     <div className="index_calendar_title">Upcoming Events</div>
-                    <Calendar sourcePage="index" eventsList={upcomingEvents}/>
+                    <Calendar sourcePage="index" eventsList={upcomingEvents} eventLinks={eventLinks}/>
                 </div>
                 <ProjectsSection />
                 <ContactSection />
@@ -68,12 +69,19 @@ export const query = graphql`
                 id
                 name
                 role
+                createPage
                 performances {
                     date
                     venue
                     venueLink
                     id
                 }
+            }
+        }
+        allSitePage(filter: {path: {regex: "/events/"}}) {
+            nodes {
+                path
+                pageContext
             }
         }
     }`

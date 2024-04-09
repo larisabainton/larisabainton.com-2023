@@ -1,0 +1,18 @@
+.event-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.performance-list-item {
+    display: flex;
+    flex-direction: column;
+    font-size: 18pt;
+    padding: 2em 0;
+    font-weight: 500;
+}
+
+.event-page_description {
+    padding: 0 8vw;
+}
