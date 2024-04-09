@@ -8,12 +8,14 @@
 @import 'about';
 @import 'calendar';
 @import 'contact';
+@import 'contentful-event';
 @import 'layout';
 @import 'media';
 @import 'projects';
 
 body {
     font-family: $text-font-family;
+    font-weight: 300;
     font-size: $text-font-size;
     margin: 0px;
 }
@@ -60,7 +62,7 @@ a {
 }
 
 em {
-    font-weight: bold;
+    font-weight: 500;
     color: $accent-color;
     font-style: normal;
 }
@@ -72,6 +74,21 @@ em {
 .youtube-video {
     width: 60vw;
     height: 45vh;
+}
+
+.title {
+    font-family: $title-font-family;
+    font-size: $title-font-size;
+    text-align: center;
+    width: 100%;
+}
+
+.title-link {
+    color: rgba(75, 128, 52);
+}
+
+.title-link:hover {
+    color: rgba(93,158,64);
 }
 
 @media screen and (max-width: 600px) {
