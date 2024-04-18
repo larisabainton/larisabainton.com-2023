@@ -85,7 +85,7 @@ header {
     display: flex;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1025px) {
     .header_desktop-links {
         display: none;
     }
@@ -95,9 +95,13 @@ header {
         align-items: center;
         justify-content: center;
     }
+
+    .header_title {
+        font-size: 3vh;
+    }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) { 
     .menu_image {
         width: 40px;
         height: 40px;
