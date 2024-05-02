@@ -65,6 +65,8 @@ const Event = ({ data }) => {
 
 export default Event;
 
+export const Head = () => <SEO />
+
 export const query = graphql`
     query ($id: String!) {
         contentfulEvent(id: {eq: $id}) {
