@@ -2,6 +2,7 @@
 import React from "react";
 import '../../style/main.scss';
 import Layout from "../../components/layout";
+import SEO from "../../components/SEO";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
