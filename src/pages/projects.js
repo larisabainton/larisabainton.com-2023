@@ -62,6 +62,23 @@ const digitalMediaSection = () => {
     )
 }
 
+const graphicDesignSection = (photos) => {
+    return (
+        <li className="projects-page_list-item graphic-design">
+            <div className="projects-page_list-item_title graphic-design_title">Graphic Design</div>
+            <ul className="projects-page_list-item_list graphic-design_list">
+                {photos.map((photo, i) => {
+                    return (
+                        <li className="projects-page_list-item_list-item graphic-design_list-item" key={`graphic-design-${i}`}>
+                            <GatsbyImage alt="" className="graphic-design_list-item_image" image={getImage(photo)}/>
+                        </li>
+                    )
+                })}
+            </ul>
+        </li>
+    )
+}
+
 const ProjectsPage = ({ data }) => {
     return (
         <Layout>
@@ -73,8 +90,9 @@ const ProjectsPage = ({ data }) => {
                     <div className="projects-page_title">Projects</div>
                     <div className="projects-page_subtitle">An sample of several creative projects by Larisa</div>
                     <ul className="projects-page_list">
-                        {digitalMediaSection()}
                         {webDesignSection()}
+                        {digitalMediaSection()}
+                        {graphicDesignSection(data.allContentfulGraphicDesign.nodes[0].photos)}
                         {embroiderySection(data.allContentfulEmbroidery.nodes[0].photos)}                    
                     </ul>
                 </div>
@@ -91,6 +109,13 @@ export const Head = () => <SEO title="Larisa Bainton Hernandez | Projects"/> // 
 export const query = graphql`
 query ProjectsPageQuery {
     allContentfulEmbroidery {
+        nodes {
+            photos {
+                gatsbyImageData
+            }
+        }
+    }
+    allContentfulGraphicDesign {
         nodes {
             photos {
                 gatsbyImageData
