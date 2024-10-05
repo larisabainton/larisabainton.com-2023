@@ -49,4 +49,8 @@
     .index_projects {
         height: 50vh;
     }
+
+    body, html, .index_projects_background {
+        overflow-x: hidden;
+    }
 }

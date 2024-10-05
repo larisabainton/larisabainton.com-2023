@@ -84,4 +84,8 @@ textarea {
         flex-direction: column;
         height: 50vh;
     }
+
+    body, html, .index_contact {
+        overflow-x: hidden;
+    }
 }
