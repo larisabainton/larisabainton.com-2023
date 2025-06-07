@@ -25,7 +25,7 @@ const CalendarPage = ({ data }) => {
                 const eventIsInArray = pastEvents.find(upcomingEvent => upcomingEvent.id === event.id)
 
                 if (!eventIsInArray) {
-                    pastEvents.push(event)
+                    pastEvents.unshift(event)
                 }
             }
         })
